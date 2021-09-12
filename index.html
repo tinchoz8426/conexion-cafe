@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Tu tienda de Cafe Online - Conexión Café</title>
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- CSS Csutom -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand align-items-center" href="#">
+                <img src="assets/images/logo.png" alt="Logo Conexión Cafe" width="40"
+                    class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-cart3 fs-3"></i>
+                        </a>
+                        <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                            <table id="lista-carrito" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="d-flex justify-content-evenly">
+                                <a href="#" id="vaciar-carrito" class="btn btn-primary">Vaciar</a>
+                                <a href="pages/pursache.html" id="procesar-pedido" class="btn btn-danger">Comprar</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ordenar">Ordenar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactanos">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container-fluid header-container pb-4">
+        <div class="text-container">
+            <h2 class="header-title pb-2">Llevamos el café hasta la puerta de tu casa.</h2>
+            <p>Queremos que sientas el placer de un buen café.</p>
+            <a class="header-button" href="#ordenar">Comprar</a>
+        </div>
+        <div class="humo">
+            <span style="--i:18"></span>
+            <span style="--i:12"></span>
+            <span style="--i:19"></span>
+            <span style="--i:17"></span>
+            <span style="--i:20"></span>
+            <span style="--i:3"></span>
+            <span style="--i:7"></span>
+            <span style="--i:8"></span>
+            <span style="--i:9"></span>
+            <span style="--i:10"></span>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <p class="letters-smoke">Queremos estar en todos los momentos importantes de tu vida y que cada uno de ello sea
+            unico. Por eso, no dejes que estas palabas se esfumen.</p>
+        <section class="container my-4" id="ordenar">
+            <h2 class="text-center">Selecciona tu producto</h2>
+            <div id="lista-productos">
+                <h3>Bebidas calientes</h3>
+                <div class="reveal row justify-content-center pb-5">
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/chocolate-caliente.png" alt="Chocolate caliente">
+                            </div>
+                            <div class="desc">
+                                <h3>Chocolate caliente</h3>
+                                <h4 class="fs-5"><span class="fs-3">115</span> ARS</h4>
+                            </div>
+                            <a href="" class="button agregar-carrito" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/cafe-con-leche.png" alt="Café con leche">
+                            </div>
+                            <div class="desc">
+                                <h3>Cafe con leche</h3>
+                                <h4 class="fs-5"><span class="fs-3">110</span> ARS</h4>
+                            </div>
+                            <a href="" class="button agregar-carrito" data-id="2">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/caramelicioso.png" alt="Caramelicioso">
+                            </div>
+                            <div class="desc">
+                                <h3>Caramelicioso</h3>
+                                <h4 class="fs-5"><span class="fs-3">130</span> ARS</h4>
+                            </div>
+                            <a href="" class="button agregar-carrito" data-id="3">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/mocha.png" alt="Mocha">
+                            </div>
+                            <div class="desc">
+                                <h3>Mocha</h3>
+                                <h4 class="fs-5"><span class="fs-3">125</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="4">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal row justify-content-center pb-5">
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/cafe.png" alt="Cafe">
+                            </div>
+                            <div class="desc">
+                                <h3>Cafe</h3>
+                                <h4 class="fs-5"><span class="fs-3">100</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="5">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/cafe-cremoso.png" alt="Cafe cremoso">
+                            </div>
+                            <div class="desc">
+                                <h3>Cafe cremoso</h3>
+                                <h4 class="fs-5"><span class="fs-3">110</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="6">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/americano.png" alt="Americano">
+                            </div>
+                            <div class="desc">
+                                <h3>Americano</h3>
+                                <h4 class="fs-5"><span class="fs-3">120</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="7">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/capuchino.png" alt="Capuchino">
+                            </div>
+                            <div class="desc">
+                                <h3>Capuchino</h3>
+                                <h4 class="fs-5"><span class="fs-3">120</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="8">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <h3>Bebidas frias</h3>
+                <div class="reveal row justify-content-center pb-5">
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/caramelicioso-helado.png" alt="Caramelicioso helado">
+                            </div>
+                            <div class="desc">
+                                <h3>Caramelicioso helado</h3>
+                                <h4 class="fs-5"><span class="fs-3">120</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="9">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/mocha-helado.png" alt="Mocha helado">
+                            </div>
+                            <div class="desc">
+                                <h3>Mocha helado</h3>
+                                <h4 class="fs-5"><span class="fs-3">125</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="10">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/limonada.png" alt="Limonada">
+                            </div>
+                            <div class="desc">
+                                <h3>Limonada</h3>
+                                <h4 class="fs-5"><span class="fs-3">90</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="11">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/jugo-naranja.png" alt="Jugo de naranja">
+                            </div>
+                            <div class="desc">
+                                <h3>Jugo de naranja</h3>
+                                <h4 class="fs-5"><span class="fs-3">95</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="12">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <h3>Licuados</h3>
+                <div class="reveal row justify-content-center pb-5">
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/licuado-banana.png" alt="Licuado de banana">
+                            </div>
+                            <div class="desc">
+                                <h3>Licuado de banana</h3>
+                                <h4 class="fs-5"><span class="fs-3">75</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="13">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/licuado-durazno.png" alt="Licuado de durazno">
+                            </div>
+                            <div class="desc">
+                                <h3>Licuado de durazno</h3>
+                                <h4 class="fs-5"><span class="fs-3">70</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="14">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/licuado-frutilla.png" alt="Licuado de frutilla">
+                            </div>
+                            <div class="desc">
+                                <h3>Licuado de frutilla</h3>
+                                <h4 class="fs-5"><span class="fs-3">85</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="15">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/licuado-mango.png" alt="Licuado de mango">
+                            </div>
+                            <div class="desc">
+                                <h3>Licuado de mango</h3>
+                                <h4 class="fs-5"><span class="fs-3">65</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="16">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <h3>Te</h3>
+                <div class="reveal row justify-content-center pb-5">
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/te-blanco.png" alt="Te blanco">
+                            </div>
+                            <div class="desc">
+                                <h3>Te blanco</h3>
+                                <h4 class="fs-5"><span class="fs-3">55</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="17">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/te-hierbas.png" alt="Te de hierbas">
+                            </div>
+                            <div class="desc">
+                                <h3>Te de hierbas</h3>
+                                <h4 class="fs-5"><span class="fs-3">65</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="18">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/te-negro.png" alt="Te negro">
+                            </div>
+                            <div class="desc">
+                                <h3>Te negro</h3>
+                                <h4 class="fs-5"><span class="fs-3">60</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="19">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/te-verde.png" alt="Te verde">
+                            </div>
+                            <div class="desc">
+                                <h3>Te verde</h3>
+                                <h4 class="fs-5"><span class="fs-3">55</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="20">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <h3>Comida</h3>
+                <div class="reveal row justify-content-center pb-5">
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/galletita-chip-chocolate.png" alt="Galletita chip de chocolate">
+                            </div>
+                            <div class="desc">
+                                <h3>Galletita con chips</h3>
+                                <h4 class="fs-5"><span class="fs-3">35</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="21">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/palmerita.png" alt="Palmerita">
+                            </div>
+                            <div class="desc">
+                                <h3>Palmerita</h3>
+                                <h4 class="fs-5"><span class="fs-3">40</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="22">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/medialuna.png" alt="Medialuna">
+                            </div>
+                            <div class="desc">
+                                <h3>Medialuna</h3>
+                                <h4 class="fs-5"><span class="fs-3">45</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="23">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
+                        <div class="card">
+                            <div class="img">
+                                <img src="assets/images/cupcake.png" alt="Cupcake">
+                            </div>
+                            <div class="desc">
+                                <h3>Cupcake</h3>
+                                <h4 class="fs-5"><span class="fs-3">50</span> ARS</h4>
+                            </div>
+                            <a href="#" class="button agregar-carrito" data-id="24">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reveal container mb-5" id="nosotros">
+            <div class="row mb-3">
+                <h2 class="text-center fs-1">Nosotros</h2>
+                <p>Somos una empresa fundada el 26 de Marzo de 1984 por Pedro Picapiedra, en la Ciudad de La Plata. Nos
+                    dedicamos a la venta de los mejores cafes de la Ciudad, pero tambien hemos ido implementando otros
+                    productos, como te, licuados, bebidas frias, entre otros. Nuestro principal compromiso es ofrecer
+                    productos de excelencia, llevar a cabo procesos de elaboración de calidad y brindar una dedicada
+                    atención al público.</p>
+            </div>
+            <div class="row justify-content-center pb-2">
+                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                    <img src="assets/images/logo-specialty-coffee-association.svg" height="100" alt="">
+                    <p>Tenemos la certificación “Professional Roaster” de la Specialty Coffee Association y
+                        constantemente
+                        viajamos a continuar capacitándonos para producir café de mayor calidad.</p>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center text-center">
+                    <img src="assets/images/logo-tienda.svg" height="100" alt="">
+                    <p>Tenemos además cinco cafeterías en Bariloche y El Bolsón, pero además le proveemos café en grano
+                        a
+                        otras cafeterías y hoteles en todo el país y vendemos café en grano o molido online.</p>
+                </div>
+            </div>
+        </section>
+        <section class="reveal container" id="contactanos">
+            <div class="row justify-content-center mb-5">
+                <div class="col-7">
+                    <h2 class="text-center fs-1 m-0">Contactanos</h2>
+                    <form action="https://formsubmit.co/tinchoz8426@gmail.com" method="POST">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre/s" required>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+                        <input type="text" id="cp" name="cp" placeholder="Codigo Postal" required>
+                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="¡Dejanos tu mensaje!"
+                            required></textarea>
+                        <div class="botones-formulario">
+                            <button class="boton-limpiar" type="reset">Limpiar</button>
+                            <button class="boton-enviar" type="submit">Enviar</button>
+                        </div>
+                        <input type="hidden" name="_subject" value="Nuevo mensaje de CONTACTO">
+                        <input type="hidden" name="_next" value="index.html">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="reveal container" id="faqs">
+            <div class="row justify-content-center mb-5">
+                <div class="col-8">
+                    <h2 class="text-center fs-1">FAQs</h2>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    ¿Hay una orden minima de compra?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">No hay una orden minima de compra, puedes pedir todo lo que
+                                    quieras. No te olvides nada!!</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    ¿Cuál es el radio de entrega?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">El radio de entrega es de 10 kilometros desde nuestra
+                                    sucursal, si tu domicilio o lugar de entrega esta fuera de este radio deberas venir
+                                    al local a retirar tus productos.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    ¿Cual es el costo de envio?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">El costo de envio es de 50 ARS, si la compra supera los 1000
+                                    ARS, el envio es gratis, aprovechalo!!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="reveal">
+        <div class="container p-4 pb-0 ">
+            <section class="mb-4 d-flex justify-content-center">
+                <!-- Facebook -->
+                <a class="link-social-media" href="https://www.facebook.com/martin.florencia.750" target="_blank">
+                    <i class="bi bi-facebook mx-2 fs-2"></i>
+                </a>
+                <!-- Twitter -->
+                <a class="link-social-media" href="https://twitter.com/tinchoz8426" target="_blank">
+                    <i class="bi bi-twitter mx-2 fs-2"></i>
+                </a>
+                <!-- Instagram -->
+                <a class="link-social-media" href="https://www.instagram.com/martin.z77/" target="_blank">
+                    <i class="bi bi-instagram mx-2 fs-2"></i>
+                </a>
+                <!-- Linkedin -->
+                <a class="link-social-media" href="https://www.linkedin.com/in/enzo-martin-zotti/" target="_blank">
+                    <i class="bi bi-linkedin mx-2 fs-2"></i>
+                </a>
+                <!-- Github -->
+                <a class="link-social-media" href="https://github.com/tinchoz8426" target="_blank">
+                    <i class="bi bi-github mx-2 fs-2"></i>
+                </a>
+            </section>
+        </div>
+        <div class="text-center text-dark p-3">
+            Todos los derechos reservados. Conexión Café 2021 ©
+        </div>
+    </footer>
+
+    <!-- Boton de WhatsApp y subir al top -->
+    <div>
+        <a href="https://wa.me/5492214987653/?text=Hola Conexion Cafe, quería realizarles una consulta..."
+            target="_blank">
+            <img class="whatsapp-icon" src="assets/images/whatsapp-logo.svg" alt="Logo WhatsApp">
+        </a>
+    </div>
+    <div>
+        <img class="arrow-icon" src="assets/images/up-arrow.png" alt="Flecha arriba">
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Script Customs -->
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
