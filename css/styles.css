@@ -198,8 +198,8 @@ footer {
     transform: scale(1.05);
 }
 
-/* Comienzo animacion Humo en cafe*/
-.humo {
+/* Comienzo animacion Humo en cafe - Removido */
+/* .humo {
   position: relative;
   display: flex;
   z-index: 0;
@@ -236,7 +236,7 @@ footer {
   100% {
     transform: translateY(-300px) scaleX(10);
   }
-}
+} */
 /* Fin animacion Humo en cafe*/
 
 /* Comienzo Letras que se esfuman */
