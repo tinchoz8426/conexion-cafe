@@ -63,6 +63,9 @@ body {
 .header-button:hover {
   color: var(--black-color);
 }
+.header-title-2{
+  display: none;
+}
 
 /* CARD */
 .card {
@@ -118,7 +121,6 @@ body {
   border: 1px solid var(--white-color);
   transform: translateY(20px);
 }
-
 /* Formulario */
 form {
   display: flex;
@@ -198,47 +200,6 @@ footer {
     transform: scale(1.05);
 }
 
-/* Comienzo animacion Humo en cafe - Removido */
-/* .humo {
-  position: relative;
-  display: flex;
-  z-index: 0;
-  padding: 0 20px 180px 120px;
-}
-.humo span {
-  position: relative;
-  bottom: 50px;
-  display: block;
-  margin: 0 2px 50px;
-  min-width: 8px;
-  height: 120px;
-  background: #fff;
-  border-radius: 50%;
-  animation: humo 3s linear infinite;
-  opacity: 0;
-  filter: blur(8px);
-  animation-delay: calc(var(--i) * -0.5s);
-}
-@keyframes humo {
-  0% {
-    transform: translateY(0) scaleX(1);
-    opacity: 0;
-  }
-  15% {
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateY(-150px) scaleX(5);
-  }
-  95% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-300px) scaleX(10);
-  }
-} */
-/* Fin animacion Humo en cafe*/
-
 /* Comienzo Letras que se esfuman */
 .letters-smoke {
   text-align: center;
@@ -271,6 +232,7 @@ footer {
   }
 }
 /* Fin Letras que se esfuman */
+
 
 /* -----Pagina compra.html----- */
 .keep-buying-button {
@@ -356,4 +318,55 @@ footer {
 
 .container-form-card form:hover {
   transform: scale(1.02);
+}
+
+/* Api Perritos */
+.results {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.result {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	height: 400px;
+	width: 300px;
+  border-radius: 10px;
+}
+
+.result img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-dog {
+	background-color: darksalmon;
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	width: 300px;
+}
+
+.button-dog:active {
+	transform: scale(0.98);
+}
+
+.button-dog:focus {
+	outline: none
 }

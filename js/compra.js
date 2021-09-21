@@ -47,8 +47,6 @@ function procesarCompra(e) {
         })
     }
     else {
-        console.log(listaCompra);
-        console.log("Gracias por tu compra");
         localStorage.clear();
         listaCompra.remove();
         trTotal.remove();
@@ -57,8 +55,29 @@ function procesarCompra(e) {
             title: '¡Muchas gracias por tu compra!',
             showConfirmButton: false,
             timer: 2000
+        }).then(function () {
+            window.location = "index.html";
         })
 
     }
 }
 
+
+//API imagen random perro
+const dog_btn = document.getElementById('dog_btn');
+const dog_result = document.getElementById('dog_result');
+
+dog_btn.addEventListener('click', perroRandom);
+
+function perroRandom() {
+	fetch('https://random.dog/woof.json')
+		.then(res => res.json())
+		.then(data => {
+			if(data.url.includes('.mp4')) {
+				perroRandom();
+			}
+			else {
+				dog_result.innerHTML = `<img src=${data.url} alt="Perro" />`;
+			}
+		});
+}

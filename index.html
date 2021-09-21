@@ -51,6 +51,7 @@
                             <div class="d-flex justify-content-evenly">
                                 <a href="#" id="vaciar-carrito" class="btn btn-primary">Vaciar</a>
                                 <a href="pages/pursache.html" id="procesar-pedido" class="btn btn-danger">Comprar</a>
+                                <input type="hidden" id="total" name="monto"></input>
                             </div>
                         </div>
                     </li>
@@ -78,27 +79,16 @@
     <header class="container-fluid header-container pb-4">
         <div class="text-container">
             <h2 class="header-title pb-2">Llevamos el café hasta la puerta de tu casa.</h2>
+            <h2 class="header-title-2 pb-2">No dejes pasar esta oportunidad.</h2>
             <p>Queremos que sientas el placer de un buen café.</p>
             <a class="header-button" href="#ordenar">Comprar</a>
-        </div>
-        <div class="humo">
-            <span style="--i:18"></span>
-            <span style="--i:12"></span>
-            <span style="--i:19"></span>
-            <span style="--i:17"></span>
-            <span style="--i:20"></span>
-            <span style="--i:3"></span>
-            <span style="--i:7"></span>
-            <span style="--i:8"></span>
-            <span style="--i:9"></span>
-            <span style="--i:10"></span>
         </div>
     </header>
 
     <!-- Main -->
     <main>
-        <p class="letters-smoke">Queremos estar en todos los momentos importantes de tu vida y que cada uno de ello sea
-            unico. Por eso, no dejes que estas palabas se esfumen.</p>
+        <p class="letters-smoke">Queremos estar en todos los momentos importantes de tu vida y que cada uno de ellos sea
+            único. Por eso, no dejes que estas palabas se esfumen.</p>
         <section class="container my-4" id="ordenar">
             <h2 class="text-center">Selecciona tu producto</h2>
             <div id="lista-productos">
@@ -203,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                <h3>Bebidas frias</h3>
+                <h3>Bebidas frías</h3>
                 <div class="reveal row justify-content-center pb-5">
                     <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
                         <div class="card">
@@ -305,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                <h3>Te</h3>
+                <h3>Té</h3>
                 <div class="reveal row justify-content-center pb-5">
                     <div class="col-lg-3 col-md-6 pb-md-5 col-sm-6 pb-sm-5 pb-5 d-flex justify-content-center">
                         <div class="card">
@@ -413,8 +403,8 @@
             <div class="row mb-3">
                 <h2 class="text-center fs-1">Nosotros</h2>
                 <p>Somos una empresa fundada el 26 de Marzo de 1984 por Pedro Picapiedra, en la Ciudad de La Plata. Nos
-                    dedicamos a la venta de los mejores cafes de la Ciudad, pero tambien hemos ido implementando otros
-                    productos, como te, licuados, bebidas frias, entre otros. Nuestro principal compromiso es ofrecer
+                    dedicamos a la venta de los mejores cafés de la Ciudad, pero también hemos ido implementando otros
+                    productos, como té, licuados, bebidas frías, entre otros. Nuestro principal compromiso es ofrecer
                     productos de excelencia, llevar a cabo procesos de elaboración de calidad y brindar una dedicada
                     atención al público.</p>
             </div>
@@ -440,9 +430,9 @@
                     <form action="https://formsubmit.co/tinchoz8426@gmail.com" method="POST">
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre/s" required>
                         <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                        <input type="email" name="email" id="email" placeholder="Correo electronico" required>
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
                         <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
-                        <input type="text" id="cp" name="cp" placeholder="Codigo Postal" required>
+                        <input type="text" id="cp" name="cp" placeholder="Código Postal" required>
                         <textarea name="mensaje" id="" cols="30" rows="10" placeholder="¡Dejanos tu mensaje!"
                             required></textarea>
                         <div class="botones-formulario">
@@ -466,13 +456,13 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="false"
                                     aria-controls="flush-collapseOne">
-                                    ¿Hay una orden minima de compra?
+                                    ¿Hay una orden mínima de compra?
                                 </button>
                             </h2>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">No hay una orden minima de compra, puedes pedir todo lo que
-                                    quieras. No te olvides nada!!</div>
+                                <div class="accordion-body">No hay una orden mínima de compra, puedes pedir todo lo que
+                                    quieras. ¡No te olvides nada!</div>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -485,8 +475,8 @@
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">El radio de entrega es de 10 kilometros desde nuestra
-                                    sucursal, si tu domicilio o lugar de entrega esta fuera de este radio deberas venir
+                                <div class="accordion-body">El radio de entrega es de 10 kilómetros desde nuestra
+                                    sucursal, si tu domicilio o lugar de entrega está fuera de este radio deberás venir
                                     al local a retirar tus productos.</div>
                             </div>
                         </div>
@@ -561,6 +551,9 @@
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Script Customs -->

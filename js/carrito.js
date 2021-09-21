@@ -42,6 +42,13 @@ class Carrito {
         }
         else {
             this.insertarCarrito(infoProducto);
+            Swal.fire({
+                icon: 'success',
+                title: 'Producto agregado',
+                timer: 1400,
+                timerProgressBar: true,
+                showConfirmButton: false,
+            })
         }
         
     }

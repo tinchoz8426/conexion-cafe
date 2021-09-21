@@ -59,3 +59,10 @@ for (const letter of letters) {
 
 //Funcionalidad de la libreria Scroll Reveal
 ScrollReveal().reveal('.reveal', { delay: 300, opacity: 0.2, distance: '100px' });
+
+
+//Funcionalidad con jQuery
+//Efecto en el titulo de la cabecera
+$(".header-title").fadeOut(5000, function () {
+    $(".header-title-2").fadeIn(5000);
+});
