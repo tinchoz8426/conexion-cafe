@@ -30,7 +30,7 @@ class Carrito {
                 productosLS = productoLS.id;
             }
         });
-        //Si el producto que esta en el Local Storage tiene el mismo ID que el que yo quiero agregar, no me va a dejar y lo que hago es generar un modal (este modal es de la libreria Sweet Alert), y sino lo agrego al carrito
+        //Si el producto que esta en el Local Storage tiene el mismo ID que el que yo quiero agregar, no me va a dejar y lo que hago es generar un modal (este modal es de la libreria Sweet Alert), y sino lo agrego al carrito (tambien genero un modal de la libreria Sweet Alert) avisando que se agrego.
         if(productosLS === infoProducto.id){
             Swal.fire({
                 icon: 'warning',
@@ -155,9 +155,9 @@ class Carrito {
                 <td>${producto.titulo}</td>
                 <td>${producto.precio}</td>
                 <td>
-                    <input type="number" class="form-control cantidad" min="1" value=${producto.cantidad}>
+                    <input type="number" class="form-control cantidad" min="1" value=${Math.abs(producto.cantidad)}>
                 </td>
-                <td id='subtotales'>${producto.precio * producto.cantidad}</td>
+                <td id='subtotales'>${Math.abs(producto.precio * producto.cantidad)}</td>
                 <td>
                     <a href="#" class="borrar-producto bi bi-x-circle fs-2" style="font-size:30px" data-id="${producto.id}"></a>
                 </td>
@@ -212,7 +212,7 @@ class Carrito {
         productosLS = this.obtenerProductosLocalStorage();
         for(let i = 0; i < productosLS.length; i++){
             let element = Number(productosLS[i].precio * productosLS[i].cantidad);
-            total = total + element;
+            total = Math.abs(total + element);
             
         }
 

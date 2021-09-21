@@ -22,7 +22,7 @@ function cargarEventos() {
     procesarCompraBtn.addEventListener('click', procesarCompra);
 
     carrito.addEventListener('change', (e) => { compra.obtenerEvento(e) });
-    carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) });
+   /*  carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) }); */
 
 }
 
@@ -54,7 +54,7 @@ function procesarCompra(e) {
             icon: 'success',
             title: '¡Muchas gracias por tu compra!',
             showConfirmButton: false,
-            timer: 2000
+            timer: 4000
         }).then(function () {
             window.location = "index.html";
         })
@@ -63,7 +63,7 @@ function procesarCompra(e) {
 }
 
 
-//API imagen random perro
+//Uso de API. Trae una imagen random de un perro.
 const dog_btn = document.getElementById('dog_btn');
 const dog_result = document.getElementById('dog_result');
 
