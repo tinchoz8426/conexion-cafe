@@ -22,7 +22,7 @@ function cargarEventos() {
     procesarCompraBtn.addEventListener('click', procesarCompra);
 
     carrito.addEventListener('change', (e) => { compra.obtenerEvento(e) });
-   /*  carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) }); */
+    /*  carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) }); */
 
 }
 
@@ -64,20 +64,25 @@ function procesarCompra(e) {
 
 
 //Uso de API. Trae una imagen random de un perro.
-const dog_btn = document.getElementById('dog_btn');
-const dog_result = document.getElementById('dog_result');
+const dogBtn = document.getElementById('dog_btn');
+const dogResult = document.getElementById('dog_result');
+const dogContainer = document.querySelector(".container-dog");
 
-dog_btn.addEventListener('click', perroRandom);
+dogBtn.addEventListener('click', perroRandom);
 
 function perroRandom() {
-	fetch('https://random.dog/woof.json')
-		.then(res => res.json())
-		.then(data => {
-			if(data.url.includes('.mp4')) {
-				perroRandom();
-			}
-			else {
-				dog_result.innerHTML = `<img src=${data.url} alt="Perro" />`;
-			}
-		});
+    fetch('https://random.dog/woof.json')
+        .then(res => res.json())
+        .then(data => {
+            if (data.url.includes('.mp4')) {
+                perroRandom();
+            }
+            else {
+                dogResult.innerHTML = `<img src=${data.url} alt="Perro" />`;
+            }
+        });
+    setTimeout(function () {
+        dogContainer.classList.toggle("non-active");
+    },
+        8000);
 }

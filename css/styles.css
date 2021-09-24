@@ -10,6 +10,7 @@
   --black-color: #000;
 }
 
+
 /* -----Pagina index.html----- */
 /* Body */
 body {
@@ -67,7 +68,7 @@ body {
   display: none;
 }
 
-/* CARD */
+/* CARDS */
 .card {
   width: 280px;
   height: 400px;
@@ -121,6 +122,7 @@ body {
   border: 1px solid var(--white-color);
   transform: translateY(20px);
 }
+
 /* Formulario */
 form {
   display: flex;
@@ -353,9 +355,9 @@ footer {
 }
 
 .button-dog {
-	background-color: darksalmon;
+	background-color: #a22929;
 	border: 0;
-	border-radius: 4px;
+	border-radius: 10px;
 	color: #fff;
 	font-size: 18px;
 	padding: 10px;
@@ -369,4 +371,7 @@ footer {
 
 .button-dog:focus {
 	outline: none
+}
+.non-active{
+  display: none;
 }
